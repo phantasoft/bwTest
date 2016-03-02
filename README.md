@@ -23,7 +23,7 @@ And use it either on its own or on a DOM element to create gauges.
 
 
 Runs the test and returns results and progress to your own callbacks: 
-
+```html
 $.bwTest({	
 	    test_upload: true,                   // Whether to test upload bandwidth or not. True/False
 	    upload_url: 'post.php',              // POST file URL. Just an empty executable script to post to. 
@@ -31,12 +31,13 @@ $.bwTest({
 	    success: function ( results ) {},    // Success callback. Returns an object with test results. 
 	    progress: function ( progress ) {},  // Progress function. Fires on Upload/Download progress. Returns an object with test results and progress so far. 
 });
-
+```
 Returns an Object with an abort() method, plus the XHR objects used in the test. 
 
 Or with a GUI: 
 ---
 
+```html
 $(element).bwTest({
                    test_upload: true,
                    upload_url: 'post.php',       
@@ -50,7 +51,7 @@ $(element).bwTest({
                               'cancel':'Cancel',		
   		  }
 });
-
+```
 It creates two animated gauges, customize in bwtest.css
 
 See index.html for a demo. 
