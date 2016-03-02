@@ -1,0 +1,307 @@
+.bw_test *{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;  
+  -khtml-user-select: none;   
+  -moz-user-select: none;     
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+/* Gauges */
+
+.bw-mask {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  margin: 1.25rem;
+  padding-top:1px;
+}
+
+.bw-semi-circle {
+  position: relative;
+  display: block;
+  width: 12.5rem;
+  height: 6.25rem;
+  background: linear-gradient(to right, #c0392b 0%, #f1c40f 50%, #1abc9c 100%);
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+.bw-semi-circle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 8.75rem;
+  height: 4.375rem;
+  margin-left: -4.375rem;
+  background: #fff;
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+
+.bw-semi-circle--mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: transparent;
+  transform: rotate(0deg) translate3d(0, 0, 0);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+.bw-semi-circle--mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 2;
+  display: block;
+  width: 12.625rem;
+  height: 6.375rem;
+  margin: -1px 0 0 -1px;
+  background: #f2f2f2;
+  border-radius: 50% 50% 50% 50%/100% 100% 0% 0%;
+}
+
+.bw-box.bw-gauge{
+    position:relative;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: grey;
+    display:inline-block;    
+}
+
+.ul_gauge{
+    margin-left:10px;
+}
+
+.bw-box>div{
+    position:relative;
+}
+
+.bw-num{
+    position: absolute;
+    z-index: 1;
+}
+
+.bw-label-speed{
+    position: absolute;
+    top: 46px;
+    z-index: 3;
+    left: 78px;
+    text-align: center;
+    font-size: 17px;
+    font-family: sans-serif;
+    width: 83px;
+    font-weight: bold;
+}
+
+.bw-label-1{
+    position: absolute;
+    top: 67px;
+    z-index: 3;
+    left: 66px;
+    text-align: center;
+    font-size: 17px;
+    font-family: sans-serif;
+    width: 109px;
+    font-weight: bold;
+}
+
+.bw-label-2{
+    position: absolute;
+    top: 89px;
+    z-index: 3;
+    left: 66px;
+    text-align: center;
+    font-size: 10px;
+    font-family: sans-serif;
+    width: 109px;
+}
+
+.bw-num_0{
+    top: 90px;
+    left: 8px;
+}
+
+.bw-num_1{
+    top: 36px;
+    left: 21px;
+}
+
+.bw-num_2{
+  top: -7px;
+  left: 65px;
+}
+
+.bw-num_3{
+    top: -16px;
+    left: 100px;
+}
+
+.bw-num_4{
+    top: -13px;
+    left: 148px;
+}
+
+.bw-num_5{
+    top: 2px;
+    left: 177px;
+}
+
+.bw-num_6{
+    top: 33px;
+    left: 207px;
+}
+
+.bw-num_7{
+    top: 89px;
+    left: 221px;
+}
+
+/* Progress bar */
+
+.bw-meter {
+    height: 20px;
+    position: absolute;
+    margin: 0px;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 0px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+    box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.bw-meter > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43,194,83);
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(43,194,83)),
+	color-stop(1, rgb(84,240,84))
+    );
+    background-image: -moz-linear-gradient(
+	center bottom,
+	rgb(43,194,83) 37%,
+	rgb(84,240,84) 69%
+    );
+    -webkit-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+    -moz-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+    box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: visible;
+}
+
+.bw-meter-inner-span{
+    width: 109px;
+    color: white;
+    z-index: 999999999;
+    cursor:pointer;
+}
+
+.bw-meter.bw-animate > span:after, .bw-animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-image:
+    -webkit-gradient(linear, 0 0, 100% 100%,
+		     color-stop(.25, rgba(255, 255, 255, .2)),
+		     color-stop(.25, transparent), color-stop(.5, transparent),
+		     color-stop(.5, rgba(255, 255, 255, .2)),
+		     color-stop(.75, rgba(255, 255, 255, .2)),
+		     color-stop(.75, transparent), to(transparent)
+		    );
+    background-image:
+    -moz-linear-gradient(
+	-45deg,
+	rgba(255, 255, 255, .2) 25%,
+	transparent 25%,
+	transparent 50%,
+	rgba(255, 255, 255, .2) 50%,
+	rgba(255, 255, 255, .2) 75%,
+	transparent 75%,
+	transparent
+    );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    -webkit-animation: bw-move 2s linear infinite;
+    -moz-animation: bw-move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.bw-animate > span:after {
+    display: none;
+}
+
+@-webkit-keyframes bw-move {
+    0% {
+	background-position: 0 0;
+    }
+    100% {
+	background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes bw-move {
+    0% {
+	background-position: 0 0;
+    }
+    100% {
+	background-position: 50px 50px;
+    }
+}
+
+
+.bw-orange > span {
+    background-color: #f1a165;
+    background-image: -moz-linear-gradient(top, #f1a165, #f36d0a);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f1a165),color-stop(1, #f36d0a));
+    background-image: -webkit-linear-gradient(#f1a165, #f36d0a);
+}
+
+.bw-nostripes{
+    -webkit-animation: none;
+    -moz-animation: none;
+    background-image: none;
+}
