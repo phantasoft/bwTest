@@ -55,3 +55,6 @@ $(element).bwTest({
 It creates two animated gauges, customize in bwtest.css
 
 See index.html for a demo. 
+
+# License
+MIT. See [LICENSE](LICENSE)
