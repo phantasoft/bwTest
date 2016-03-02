@@ -1,4 +1,3 @@
-AUTHOR:
 Bandwidth Tester
 (C) 2016 by Phantasoft S.R.L
 phanta-soft.com
@@ -7,15 +6,18 @@ root@phanta-soft.com
 San Lorenzo 3167
 Mar del Plata - Argentina
 
-Bandwidth Tester V 0.1
+# Bandwidth Tester V 0.1
 
-
-USAGE: 
+Usage
+---
 
 Include the files in your head: 
+---
 
+```html
 <script src="bwtest.js"></script>    
 <link rel="stylesheet" type="text/css" href="bwtest.css">
+```
 
 And use it either on its own or on a DOM element to create gauges. 
 
@@ -33,6 +35,7 @@ $.bwTest({
 Returns an Object with an abort() method, plus the XHR objects used in the test. 
 
 Or with a GUI: 
+---
 
 $(element).bwTest({
                    test_upload: true,
